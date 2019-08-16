@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LIFEZ</title>
+</head>
+<body>
+    <h1>GAME OF LIFE</h1>
+    <ul>
+        <li>Qualsiasi cella viva con meno di due celle vive adiacenti muore, come per effetto d'isolamento;</li>
+        <li>Qualsiasi cella viva con due o tre celle vive adiacenti sopravvive alla generazione successiva;</li>
+        <li>Qualsiasi cella viva con più di tre celle vive adiacenti muore, come per effetto di sovrappopolazione;</li>
+        <li>Qualsiasi cella morta con esattamente tre celle vive adiacenti diventa una cella viva, come per effetto di riproduzione.</li>
+    </ul>
+
+    <button id="btnEvolveGridState">EVOLVE STATE</button>
+    <button id="btnRefreshGridState">REFRESH STATE</button>
+    <br><br>
+    <canvas id="myCanvas" height="400" width="400" style="border: 1px solid darkgreen;"></canvas>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
