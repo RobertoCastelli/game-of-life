@@ -109,6 +109,7 @@ evolveGridState.addEventListener('click', function () {
 refreshGridState.addEventListener('click', function () {
     location.reload();
 });
+
     
 
 

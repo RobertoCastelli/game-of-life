@@ -4,22 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>LIFEZ</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <title>Game of life</title>
 </head>
 <body>
-    <h1>GAME OF LIFE</h1>
-    <ul>
-        <li>Qualsiasi cella viva con meno di due celle vive adiacenti muore, come per effetto d'isolamento;</li>
-        <li>Qualsiasi cella viva con due o tre celle vive adiacenti sopravvive alla generazione successiva;</li>
-        <li>Qualsiasi cella viva con più di tre celle vive adiacenti muore, come per effetto di sovrappopolazione;</li>
-        <li>Qualsiasi cella morta con esattamente tre celle vive adiacenti diventa una cella viva, come per effetto di riproduzione.</li>
-    </ul>
+<div class="container mx-auto rounded my-3" style="max-width: 600px">
 
-    <button id="btnEvolveGridState">EVOLVE STATE</button>
-    <button id="btnRefreshGridState">REFRESH STATE</button>
-    <br><br>
-    <canvas id="myCanvas" height="400" width="400" style="border: 1px solid darkgreen;"></canvas>
+            <h1 class="text-center bg-dark rounded p-3 text-white">GAME OF LIFE</h1>
+            <p>
+                The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton
+                Conway in 1970.[1]
+                The game is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further
+                input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves, or, for
+                advanced players, by creating patterns with particular properties.
+            </p>
 
+    <div class="mx-auto">
+        <h3 class="text-center">RULES</h3>
+        <ol class="col-md-10 mx-auto">
+            <li>Any live cell with fewer than two live neighbours dies, as if by underpopulation.</li>
+            <li>Any live cell with two or three live neighbours lives on to the next generation.</li>
+            <li>Any live cell with more than three live neighbours dies, as if by overpopulation.</li>
+            <li>Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</li>
+        </ol>
+    </div>
+
+    <div class="jumbotron text-center mt-5">
+        <button id="btnEvolveGridState" class="btn btn-lg btn-outline-dark shadow">EVOLVE STATE</button>
+        <button id="btnRefreshGridState"class="btn btn-lg btn-outline-danger shadow">REFRESH STATE</button>
+        <br><br>
+        <canvas id="myCanvas" height="400" width="400" style="border: 1px solid darkgreen;" class=" mx-autoshadow rounded"></canvas>
+    </div>
+
+    <footer class="text-center text-muted mb-0 my-5">
+        <p>copyright &copy; 2019 Roberto Castelli - www.robertocastelli.dev</p>
+    </footer>
+</div>
     <script src="js/app.js"></script>
 </body>
 </html>
